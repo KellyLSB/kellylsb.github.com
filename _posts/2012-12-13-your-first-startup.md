@@ -15,6 +15,5 @@ Everything was awesome! We had two amazing PHP developers, one CEO, one CFO, one
 
 Moral of this story: when you start a company don't ask your employees to move unless you can afford it. Also do not ask for fulltime work unless you can afford to pay your employees' cost of living.
 
-More soon
-
-- Kelly
+More soon,<br />
+Kelly

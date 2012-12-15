@@ -11,4 +11,4 @@ So yesterday evening I started browsing the internet. I didn't really have a goa
 
 While I don't have the time today to write out a well written post I did want to share this video with you by [Jon Rohan](https://github.com/JonRohan) at GitHub.
 
-<iframe src="http://player.vimeo.com/video/54990931?badge=0" width="500" height="375" frameborder="0"></iframe>
+{% vimeo 54990931 %}

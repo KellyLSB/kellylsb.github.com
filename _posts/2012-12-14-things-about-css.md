@@ -2,7 +2,7 @@
 layout: post
 title: "Things about CSS"
 description: "Stuff I learned"
-category: 
+category:
 tags: []
 ---
 {% include JB/setup %}
@@ -11,4 +11,4 @@ So yesterday evening I started browsing the internet. I didn't really have a goa
 
 While I don't have the time today to write out a well written post I did want to share this video with you by [Jon Rohan](https://github.com/JonRohan) at GitHub.
 
-{% vimeo 54990931 %}
+[http://vimeo.com/54990931](http://vimeo.com/54990931)

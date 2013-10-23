@@ -2,7 +2,7 @@
 layout: post
 title: "Optimizing Ruby/Rails: AR Sucks"
 description: "Part 1 in a series of responses about Ruby's scaling capabilities"
-category: [optimization, startups]
+category: optimization
 tags: [scaling, ruby, rails, activerecord, optimization]
 ---
 {% include JB/setup %}

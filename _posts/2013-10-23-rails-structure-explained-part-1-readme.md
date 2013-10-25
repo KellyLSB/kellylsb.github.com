@@ -20,33 +20,77 @@ This file should give a brief explanation of what your application is/does. It s
 
 The installation should be in-depth. You want to ensure that every new engineer installs their application the same way as everyone else. That does not necessarily mean that other engineers will break out of the box and choose their own path, but it's good to give a direction to all new engineers. A sample Installation blurb might look like.
 
-1. Install Rbenv and Ruby Build
-    - Mac OS (If you already have homebrew skip to #2)
-        1. Install XCode (via App Store)
-        2. Install Command Line Tools
-            - Open XCode
-            - Open the Prefrences from the top bar menu
-            - Select the downloads tab
-            - Install the Command Line Tools
-        1. Install Homebrew (http://brew.sh/)
-            - Open a terminal
-            - Run `ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"`
-        2. Install the latest Git
-            - `brew install git`
-        3. Install the latest Rbenv and Ruby Build
-            - `brew install rbenv`
-            - `brew install ruby-build`
-    - Ubuntu
-        1. Update your machine
-            - `sudo apt-get update`
-            - `sudo apt-get upgrade`
-        2. Install dependencies (Ubuntu LTS 12.04)
-            - `sudo apt-get install nodejs libc6-dev bison openssl libreadline6 libreadline6-dev zlib1g zlib1g-dev libssl-dev libyaml-dev libxml2-dev autoconf`
-        3. Install Rbenv and Ruby Build
-            - `git clone https://github.com/sstephenson/rbenv.git ~/.rbenv` # Checks out rbenv into your local profile
-            - `echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc` # Add the rbenv bin folder to your PATH
-            - `echo 'eval "$(rbenv init -)"' >> ~/.bashrc` # Handle rbenv shims and prepare environment
-            - `git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build` # Install Ruby Build
+<ol>
+  <li>
+    Install Rbenv and Ruby Build
+    <ul>
+      <li>
+        Mac OS (If you already have homebrew skip to #2)
+        <ol>
+          <li>
+            Install XCode (via App Store)
+          </li>
+          <li>
+            Install Command Line Tools
+            <ul>
+              <li>Open XCode</li>
+              <li>Open the Prefrences from the top bar menu</li>
+              <li>Select the downloads tab</li>
+              <li>Install the Command Line Tools</li>
+            </ul>
+          </li>
+          <li>
+            Install Homebrew (http://brew.sh/)
+            <ul>
+              <li>Open a terminal</li>
+              <li><code>ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"</code></li>
+            </ul>
+          </li>
+          <li>
+            Install the latest Git
+            <ul>
+              <li><code>brew install git</code></li>
+            </ul>
+          </li>
+          <li>
+            Install the latest Rbenv and Ruby Build
+            <ul>
+              <li><code>brew install rbenv</code></li>
+              <li><code>brew install ruby-build</code></li>
+            </ul>
+          </li>
+        </ol>
+      </li>
+      <li>
+        Ubuntu (LTS 12.04)
+        <ol>
+          <li>
+            Update your machine
+            <ul>
+              <li><code>sudo apt-get update</code></li>
+              <li><code>sudo apt-get upgrade</code></li>
+            </ul>
+          </li>
+          <li>
+            Install dependencies
+            <ul>
+              <li><code>sudo apt-get install nodejs libc6-dev bison openssl libreadline6 libreadline6-dev zlib1g zlib1g-dev libssl-dev libyaml-dev libxml2-dev autoconf</code></li>
+            </ul>
+          </li>
+          <li>
+            Install Rbenv and Ruby Build
+            <ul>
+              <li><code>git clone https://github.com/sstephenson/rbenv.git ~/.rbenv</code></li>
+              <li><code>echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc</code></li>
+              <li><code>echo 'eval "$(rbenv init -)"' >> ~/.bashrc</code></li>
+              <li><code>git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build</code></li>
+            </ul>
+          </li>
+        </ol>
+      </li>
+    </ul>
+  </li>
+</ol>
 
 etc... You want to give the most detailed instructions possible. Because you never know what level of expertise your new engineer is. Also it makes it easier to reinstall if you need to. It's a lot faster to get started if you already know everything you need to do. Don't forget to include things like installing your database software (i.e. MySQL) and creating, migrating, and loading your database dump.
 

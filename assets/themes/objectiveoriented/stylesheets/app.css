@@ -164,19 +164,32 @@ div.site-footer {
 }
 
 pre code {
+  border: 1px #6939a7 solid;
+  border-radius: 5px;
   display: block;
   margin: 10px auto;
-  padding: 5px;
+  padding: 5px 5px;
+}
+
+pre code:before,
+pre code:after {
+  content: none;
 }
 
 code {
   color: #6939a7;
   font-size: 0.9em;
   font-family: courier;
-  border: 1px #6939a7 solid;
-  border-radius: 5px;
   display: inline-block;
-  padding: 0 5px;
+}
+
+li code {
+  display: inline;
+}
+
+code:before,
+code:after {
+  content: '`';
 }
 
 p {

@@ -18,7 +18,7 @@ This file should give a brief explanation of what your application is/does. It s
 
 ## Installation
 
-The installation should be in-depth. You want to ensure that every new engineer installs their application the same way as everyone else. That does not necissarily mean that other engineers will break out of the box and choose their own path, but it's good to give a direction to all new engineers. A sample Installation blurb might look like.
+The installation should be in-depth. You want to ensure that every new engineer installs their application the same way as everyone else. That does not necessarily mean that other engineers will break out of the box and choose their own path, but it's good to give a direction to all new engineers. A sample Installation blurb might look like.
 
 1. Install Rbenv and Ruby Build
   - Mac OS (If you already have homebrew skip to #2)

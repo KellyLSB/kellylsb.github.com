@@ -1,0 +1,22 @@
+<div class="row pagination">
+  <div class="small-12 large-12 columns pagination-centered">
+    <ul class="pagination">
+      {% if page.previous %}
+        <li class="arrow">
+          <a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&laquo; <small>previous</small></a>
+        </li>
+      {% else %}
+        <li class="arrow unavailable"><a href="#">&laquo; <small>previous</small></li>
+      {% endif %}
+      <li><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Archive</a></li>
+
+      {% if page.next %}
+        <li class="arrow">
+          <a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}"><small>next</small> &raquo;</a>
+        </li>
+      {% else %}
+        <li class="arrow unavailable"><a href=""><small>next</small> &raquo;</a></li>
+      {% endif %}
+    </ul>
+  </div>
+</div>

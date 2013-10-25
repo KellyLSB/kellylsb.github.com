@@ -1,0 +1,210 @@
+@import url("http://fonts.googleapis.com/css?family=Exo:100,400");
+/**
+ * Elements.less
+ */
+/*---------------------------------------------------
+    LESS Elements 0.6
+  ---------------------------------------------------
+    A set of useful LESS mixins by Dmitry Fadeyev
+    Special thanks for mixin suggestions to:
+      Kris Van Herzeele,
+      Benoit Adam,
+      Portenart Emile-Victor,
+      Ryan Faerman
+
+    More info at: http://lesselements.com
+-----------------------------------------------------*/
+/**
+ * Google WebFonts
+ */
+/**
+ * Color Variables
+ */
+/**
+ * Overall Functions
+ */
+/**
+ * Overall Classes
+ */
+body {
+  background: #c3c3c3 url(../images/design/kellybecker_grayscale_lightened.jpg) no-repeat top left;
+  background-size: 40%;
+  color: #333333;
+  /*background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #e3e3e3), color-stop(1, #a3a3a3)) url(images/design/kellybecker.jpg);
+  background: -ms-linear-gradient(bottom, #e3e3e3, #a3a3a3) url(images/design/kellybecker.jpg);
+  background: -moz-linear-gradient(center bottom, #e3e3e3 0%, #a3a3a3 100%) url(images/design/kellybecker.jpg);*/
+}
+a {
+  color: #6939a7;
+}
+a:hover {
+  color: #4e366d;
+  text-decoration: underline;
+}
+a.button {
+  background: #6939a7;
+  margin: 10px auto;
+  border: none;
+}
+a.button:hover {
+  background: #4e366d;
+}
+div.row {
+  max-width: 70em;
+}
+
+.row .row {
+  margin: 0;
+}
+/**
+ * Page Design
+ */
+div.site-header {
+  margin: 40px auto;
+}
+div.site-header div.title h1 {
+  text-shadow: 0px 0px 2em #4e366d;
+  font-family: "Exo";
+  font-size: 50px;
+  color: #333333;
+  margin: 0;
+}
+div.site-header div.title h2 {
+  text-shadow: 0px 0px 2em #333333;
+  font-family: "Helvetica Neue", Helvetica, Arial, serif;
+  font-size: 25px;
+  color: #4e366d;
+  margin: 0;
+}
+div.site-header div.title h3 {
+  text-shadow: 0px 0px 2em #333333;
+  font-family: "Helvetica Neue", Helvetica, Arial, serif;
+  font-size: 16px;
+  margin: 0;
+}
+div.site-header div.title h3,
+div.site-header div.title h3 * {
+  color: #4e366d;
+}
+div.site-header div.title h3 a:hover {
+  text-decoration: underline;
+}
+div.site-header div.title p {
+  color: #333333;
+  margin: 35px auto;
+}
+div.site-header div.title a.button {
+  width: 90px;
+}
+div.site-header div.github {
+  text-align: center;
+  position: relative;
+}
+div.site-header div.github div.text {
+  font-family: "Exo";
+  position: absolute;
+  font-size: 18px;
+  display: none;
+  top: -5px;
+  right: 0;
+  left: 0;
+}
+div.site-header div.github img {
+  margin-top: 10px;
+  -moz-opacity: 0.5;
+  -khtml-opacity: 0.5;
+  -webkit-opacity: 0.5;
+  opacity: 0.5;
+}
+div.site-header div.github:hover div.text {
+  display: block;
+}
+div.site-header div.github:hover img {
+  -moz-opacity: 0.7;
+  -khtml-opacity: 0.7;
+  -webkit-opacity: 0.7;
+  opacity: 0.7;
+}
+
+div.home-blurb, div.blog-post, div.page-content {
+  margin: 40px auto 0px;
+}
+div.blog-post h1 {
+  line-height: 50px;
+}
+div.blog-post h1 small {
+  color: #444;
+}
+div.pagination {
+  border-top: 1px solid #999;
+  border-bottom: 1px solid #999;
+  margin: 40px auto;
+}
+ul.pagination {
+  margin-bottom: 10px;
+}
+ul.pagination li a {
+  font-size: 20px;
+  color: #6939a7;
+}
+ul.pagination li.arrow small {
+  font-size: 0.7em;
+}
+ul, ol, dl {
+  list-style-position: inside;
+}
+
+div.year h2 {
+  border-bottom: 1px solid #000;
+  display: block;
+}
+
+div.site-footer {
+  margin: 40px auto;
+}
+
+pre code {
+  display: block;
+  margin: 10px auto;
+  padding: 5px;
+}
+
+code {
+  color: #6939a7;
+  font-size: 0.9em;
+  font-family: courier;
+  border: 1px #6939a7 solid;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 0 5px;
+}
+
+p {
+  line-height: 2em;
+}
+
+div.post-comments {
+  border-top: 1px solid #999;
+  padding: 20px 0 0;
+}
+
+div.home-blurb li, div.blog-post li, div.page-content li {
+  padding: 3px 0;
+}
+
+.top-bar {
+  background: #333333;
+  border: solid 1px #000;
+  height: 47px;
+}
+
+.top-bar-section li a:not(.button) {
+  background: #333333;
+}
+
+.top-bar-section li a:not(.button):hover,
+.top-bar .name h1 a:hover {
+  background: #6939a7;
+}
+
+

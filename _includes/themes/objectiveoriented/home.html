@@ -1,0 +1,46 @@
+<div class="row home-blurb">
+  <div class="small-12 large-12 columns">
+    <p>
+      Hi! I'm Kelly, and this is my technical blog. I'm working on writing more random stuff here. Why? Because it never hurts to share ideas and I personally think my ideas are pretty good. Please feel free to contribute and start conversations in the comments as well as email me or comment on posts with ideas, suggestions and criticisms.
+    </p>
+    <h4>Mini Bio</h4>
+    <p>
+      I'm a insane person and I'm loving every minute of it. I have been doing software engineering as a career since about 2004 and playing with *nix operating systems since the late 90s. I go out of my way to learn as much as I can about everything. I believe every experience in life is a valuable and that people should express themselves to radical degree. Oh yah, and I'm a Burner!
+    </p>
+  </div>
+</div>
+
+<div class="row blog-post">
+  <div class="small-12 large-8 columns">
+    {% assign first_post = site.posts.first %}
+    <h1>
+      {{ first_post.title }}<br />
+      <small>{{ first_post.description }}</small>
+    </h1>
+    {{ first_post.content }}
+    <a href="{{ BASE_PATH }}{{ first_post.url }}#comments" class="button">Comment on this post.</a>
+  </div>
+
+  <div class="small-12 large-4 columns">
+    <h4>Published</h4>
+    <div class="date"><span>{{ first_post.date | date_to_long_string }}</span></div>
+
+    {% unless first_post.tags == empty %}
+      <h4>Tags</h4>
+      <ul class="tag_box">
+      {% assign tags_list = first_post.tags %}
+      {% include JB/tags_list %}
+      </ul>
+    {% endunless %}
+
+    <br /><h4>Latest Posts</h4>
+    <ul class="posts">
+      {% for post in site.posts limit:5 %}
+        <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
+{% assign page = site.posts.first %}
+{% include themes/objectiveoriented/pagination.html %}

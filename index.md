@@ -1,6 +1,6 @@
 ---
 layout: home
 title: Objective Oriented
-tagline: A trip through a young entreprenuer's life.
+tagline: The thoughts and opinions of a young entrepreneur.
 ---
 {% include JB/setup %}

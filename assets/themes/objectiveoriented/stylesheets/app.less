@@ -1,0 +1,180 @@
+/**
+ * Elements.less
+ */
+@import url("elements.less");
+
+/**
+ * Google WebFonts
+ */
+@import url("http://fonts.googleapis.com/css?family=Exo:100,400");
+
+/**
+ * Color Variables
+ */
+@black: lighten(#000, 20%);
+@lgray: #e3e3e3;
+@dgray: #a3a3a3;
+
+@purple: #6939A7;
+@dpurple: mix(@black, @purple, 50%);
+
+/**
+ * Overall Functions
+ */
+ 
+/**
+ * Overall Classes
+ */
+body {
+	.gradient(mix(@lgray, @dgray, 50%), @lgray, @dgray);
+}
+
+a {
+	color: @purple;
+	
+	&:hover {
+		color: @dpurple;
+		text-decoration: underline;
+	}
+}
+
+a.button {
+	background: @purple;
+	margin: 10px auto;
+	
+	&:hover {
+		background: @dpurple;
+	}
+}
+ 
+/**
+ * Page Design
+ */ 
+div.site-header {
+	margin: 40px auto;
+	
+	div.title {
+		
+		h1 {
+			text-shadow: 0px 0px 2em @dpurple;
+			font-family: "Exo";
+			font-size: 50px;
+			color: @black;
+			margin: 0;
+		}
+		
+		h2 {
+			text-shadow: 0px 0px 2em @black;
+			font-family: "Helvetica Neue", Helvetica, Arial, serif;
+			font-size: 25px;
+			color: @dpurple;
+			margin: 0;
+		}
+		
+		h3 {
+			text-shadow: 0px 0px 2em @black;
+			font-family: "Helvetica Neue", Helvetica, Arial, serif;
+			font-size: 16px;
+			margin: 0;
+
+			&, * {
+				color: @dpurple;
+			}
+			
+			a:hover {
+				text-decoration: underline;
+			}
+		}
+		
+		p {
+			color: @black;
+			margin: 35px auto;
+		}
+		
+		a.button {
+			width: 90px;
+		}
+		
+	}
+	
+	div.github {
+		text-align: center;
+		position: relative;
+		
+		div.text {
+			font-family: "Exo";
+			position: absolute;
+			font-size: 18px;
+			display: none;
+			top: -5px;
+			right: 0;
+			left: 0;
+		}
+		
+		img {
+			margin-top: 10px;
+			.opacity;
+		}	
+		
+		&:hover {
+			div.text {
+				display: block;
+			}
+		
+			img {
+				.opacity(0.7);	
+			}
+		}
+	}
+	
+}
+
+#projects, #portfolio, #evolutionsdk {
+	background: #FFF;
+	display: none;
+	padding: 50px;
+	width: 980px;
+	height: 50%;
+	
+	a.close {
+		position: absolute;
+		font-weight: bold;
+		font-size: 20px;
+		color: @lgray;
+		right: 10px;
+		top: 10px;
+		
+		&:hover {
+			text-decoration: none;
+			color: @purple;
+		}
+	}
+	
+	div {
+		overflow: scroll;
+		height: 100%;
+	
+		h1 {
+			margin: 0px auto 40px;
+			font-weight: 100;
+		}
+		
+		ul.projects-list, ul.portfolio-list {
+			
+			li {
+				display: block;
+				
+				a {
+					margin-bottom: 10px;
+					font-weight: bold;
+					font-size: 20px;
+					display: block;
+				}
+			}
+		}
+	}
+}
+
+div.main-content {
+	color: @black;
+}

@@ -1,0 +1,13 @@
+/* humanstxt.org */
+
+/* SITE */
+	Last Update: 2012/06/01
+	Standards: HTML5, CSS3
+	Components: Foundation, Modernizr, jQuery, kModal
+	Software: Coda 2
+
+/* TEAM */
+	Your title: Kelly becker
+	Site: http://kellybecker.me
+	Twitter: @KellyLSB
+	Location: Oakland, CA

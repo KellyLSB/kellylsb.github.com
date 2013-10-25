@@ -40,83 +40,83 @@ Rebasing is a Git technique that rewinds your branch back to the base from which
 ### Without Pairing
 
 1. Branch off develop
-  - `git checkout develop`
-  - `git checkout -B feature/GH-2`
-  - `git push -u origin feature/GH-2`
+    - `git checkout develop`
+    - `git checkout -B feature/GH-2`
+    - `git push -u origin feature/GH-2`
 2. Write Code (Commit often; every file change, spec pass, etc...)
-  - Don't forget to use `git status`, `git diff` and selectively add your files as necessary.
-  - Do not squash your commits (it makes it hard to retroactively makes changes later)!
-  - Do not force push to your branch (unless it is necessary)
+    - Don't forget to use `git status`, `git diff` and selectively add your files as necessary.
+    - Do not squash your commits (it makes it hard to retroactively makes changes later)!
+    - Do not force push to your branch (unless it is necessary)
 3. When you are ready to merge back to develop, rebase off develop
-  - `git checkout develop`
-  - `git pull origin develop`
-  - `git checkout feature/GH-2`
-  - `git rebase develop`
+    - `git checkout develop`
+    - `git pull origin develop`
+    - `git checkout feature/GH-2`
+    - `git rebase develop`
 4. If there is a conflict resolve it. (If not skip to #6)
-  - Do not change any files other than the conflict resolution!
-  - A merge tool such as MeldMerge or Kaliedoscope may be helpful.
+    - Do not change any files other than the conflict resolution!
+    - A merge tool such as MeldMerge or Kaliedoscope may be helpful.
 5. Once you have resolved your conflict add the changes and continue the rebase
-  - `git add ./path/to/changed/file [./more/files, ...]`
-  - Don't forget to check git status
-  - `git status`
-  - `git rebase --continue`
-  - If another conflict emerges go back to step #4
+    - `git add ./path/to/changed/file [./more/files, ...]`
+    - Don't forget to check git status
+    - `git status`
+    - `git rebase --continue`
+    - If another conflict emerges go back to step #4
 6. Congratulations you have successfully rebased. You may now submit a PR or merge back into develop
-  - Submit a PR on GitHub or...
-  - `git checkout develop`
-  - `git merge feature/GH-2`
+    - Submit a PR on GitHub or...
+    - `git checkout develop`
+    - `git merge feature/GH-2`
 7. Throw a party!
 
 ### With Pairing
 
 1. Branch off develop
-  - `git checkout develop`
-  - `git checkout -B pairing/feature/GH-2`
-  - `git push -u origin pairing/feature/GH-2`
-  - `git checkout -B pairing/feature/GH-2/KellyLSB`
-  - `git push -u origin pairing/feature/GH-2/KellyLSB`
+    - `git checkout develop`
+    - `git checkout -B pairing/feature/GH-2`
+    - `git push -u origin pairing/feature/GH-2`
+    - `git checkout -B pairing/feature/GH-2/KellyLSB`
+    - `git push -u origin pairing/feature/GH-2/KellyLSB`
 2. Write Code (Commit often; every file change, spec pass, etc...)
-  - Don't forget to use `git status`, `git diff` and selectively add your files as necessary.
-  - Do not squash your commits (it makes it hard to retroactively makes changes later)!
-  - Do not force push to your branch (unless it is necessary)
+    - Don't forget to use `git status`, `git diff` and selectively add your files as necessary.
+    - Do not squash your commits (it makes it hard to retroactively makes changes later)!
+    - Do not force push to your branch (unless it is necessary)
 3. When you are ready to merge back to the pairing branch, rebase off the paring branch
-  - `git checkout pairing/feature/GH-2`
-  - `git pull origin pairing/feature/GH-2`
-  - `git checkout pairing/feature/GH-2/KellyLSB`
-  - `git rebase pairing/feature/GH-2`
+    - `git checkout pairing/feature/GH-2`
+    - `git pull origin pairing/feature/GH-2`
+    - `git checkout pairing/feature/GH-2/KellyLSB`
+    - `git rebase pairing/feature/GH-2`
 4. If there is a conflict resolve it. (If not skip to #6)
-  - Do not change any files other than the conflict resolution!
-  - A merge tool such as MeldMerge or Kaliedoscope may be helpful.
+    - Do not change any files other than the conflict resolution!
+    - A merge tool such as MeldMerge or Kaliedoscope may be helpful.
 5. Once you have resolved your conflict add the changes and continue the rebase
-  - `git add ./path/to/changed/file [./more/files, ...]`
-  - Don't forget to check git status
-  - `git status`
-  - `git rebase --continue`
-  - If another conflict emerges go back to step #4
+    - `git add ./path/to/changed/file [./more/files, ...]`
+    - Don't forget to check git status
+    - `git status`
+    - `git rebase --continue`
+    - If another conflict emerges go back to step #4
 6. Congratulations you have successfully rebased. You may now submit a PR or merge back into the pairing branch
-  - Submit a PR on GitHub or...
-  - `git checkout pairing/feature/GH-2`
-  - `git merge pairing/feature/GH-2`
+    - Submit a PR on GitHub or...
+    - `git checkout pairing/feature/GH-2`
+    - `git merge pairing/feature/GH-2`
 7. Collaborate with the other engineers you are pairing with.
-  - Is the branch ready to be rebased back into develop?
-  - Is there more changes that need to be made?
-  - If the branch is ready continue otherwise checkout your personal pairing branch again and continue with step #2.
+    - Is the branch ready to be rebased back into develop?
+    - Is there more changes that need to be made?
+    - If the branch is ready continue otherwise checkout your personal pairing branch again and continue with step #2.
 8. Ready to merge back to develop, rebase of develop
-  - `git checkout develop`
-  - `git pull origin develop`
-  - `git checkout pairing/feature/GH-2`
-  - `git rebase develop`
+    - `git checkout develop`
+    - `git pull origin develop`
+    - `git checkout pairing/feature/GH-2`
+    - `git rebase develop`
 9. If there is a conflict resolve it. (If not skip to #11)
-  - Do not change any files other than the conflict resolution!
-  - A merge tool such as MeldMerge or Kaliedoscope may be helpful.
+    - Do not change any files other than the conflict resolution!
+    - A merge tool such as MeldMerge or Kaliedoscope may be helpful.
 10. Once you have resolved your conflict add the changes and continue the rebase
-  - `git add ./path/to/changed/file [./more/files, ...]`
-  - Don't forget to check git status
-  - `git status`
-  - `git rebase --continue`
-  - If another conflict emerges go back to step #9
+    - `git add ./path/to/changed/file [./more/files, ...]`
+    - Don't forget to check git status
+    - `git status`
+    - `git rebase --continue`
+    - If another conflict emerges go back to step #9
 11. Congratulations you have successfully rebased. You may now submit a PR or merge back into develop
-  - Submit a PR on GitHub or...
-  - `git checkout develop`
-  - `git merge pairing/feature/GH-2`
+    - Submit a PR on GitHub or...
+    - `git checkout develop`
+    - `git merge pairing/feature/GH-2`
 12. Throw a party!

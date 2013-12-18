@@ -18,10 +18,10 @@ So for the purposes of this example and methodology we are going to have 1 prima
     │   ├── optimization/*
     │   ├── security/*
     │   │
-    │   ├── pairing/feature/*/[user]
-    │   ├── pairing/bugfix/*/[user]
-    │   ├── pairing/optimization/*/[user]
-    │   └── pairing/security/*/[user]
+    │   ├── pairing/features/*/[user]
+    │   ├── pairing/bugfixes/*/[user]
+    │   ├── pairing/optimizations/*/[user]
+    │   └── pairing/securities/*/[user]
     │
     ├── v1.0 (slinky)
     ├── v2.0 (torque)

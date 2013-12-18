@@ -23,9 +23,13 @@ Most of us working with rails and many other ruby applications are already famil
 
 # Assets
 
-This really oughta go away. I am not fond of the assets pipeline. Yes, it is really helpful but this is one of those parts of rails that is not explained well. It's great if you want to load very specific parts of your assets of your site into very specific controllers and views, but no one really does that. Seems to me that the asset pipeline almost always turns into a site wide reusable stylesheet that can be written in SASS, LESS, whatever and gets minified and compiled down.
+The asset pipeline is the easy route to getting assets included into your application that can also expect values from your application (via erb). It also is extensible using gems and can be used to easily import items like jQuery or Backbone.js etc.
 
-Great! But I can do that easier and faster with a tool like Codekit.
+That being said, I personally am not fond of the assets pipeline. It is really helpful but this is one of those parts of rails that is not explained well. It's great if you want to load very specific parts of your assets of your site into very specific controllers and views, but no one really does that. Seems to me that the asset pipeline almost always turns into a site wide reusable stylesheet that can be written in SASS, LESS, etc and gets minified and compiled down.
+
+Great! But I can do that easier and faster with a tool like Codekit. Mind you Codekit would not be able to read variables from my application or allow me to drop a jQuery gem which while is a minor setback, can still also expedite the front end style and development process.
+
+Simply it's easy to bloat your assets and hard to cut down on them almost as soon as it gets messy.
 
 What I think the asset pipeline oughta be used like is to load controller specific and application specfic assets into the various controllers and views as required. In example. In the default layout of Rails `./app/views/layouts/application.html.erb` you generally will find a line that looks like this `<%= stylesheet_link_tag 'application' %>`. Now most people will think "OH! Yah that's what includes the ./app/assets/stylesheets/application.css.scss file." Which is true, but did you know that you can use those in any view are layout (generally you still want it in the head, but due to HTML being so loose, it is not required and could be placed anywhere). This is helpful because I could create a secondary header for my UserController and place `<%= stylesheet_link_tag 'user' %>` in the head. If I do this across all my controllers I will wind up not only including the minified versions of the css like I would before. I will also only be loading the css required for the one page.
 
